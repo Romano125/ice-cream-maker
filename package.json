@@ -1,0 +1,24 @@
+{
+  "name": "ice-cream-maker",
+  "version": "1.0.0",
+  "description": "Ice cream maker app",
+  "main": "index.js",
+  "author": "Romano Polic",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon -e js,njk src",
+    "start:migrate": "npx prisma migrate dev && nodemon -e js,njk src",
+    "prisma:init": "npx prisma init",
+    "prisma:introspect": "npx prisma introspect",
+    "prisma:client": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.3.1",
+    "express": "^4.18.1",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

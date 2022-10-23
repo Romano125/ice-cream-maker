@@ -1,0 +1,24 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>Create Ice Creams</h1>
+
+    <form class="p-4 p-md-5 m-4 border rounded-3 bg-light" action="{% if iceCream %} /{{iceCream.id}} {% else %} /ice-creams {% endif %}" method="POST">
+        {# <div class="form-floating mb-3">
+            <select class="form-select" id="occasion" name="occasion" value="{{iceCream.occasion}}" required="required">
+                <option value="">Choose Ingredients</option>
+                {% for ingredient in ingredients %}
+                    <option {% if ingredient.id == iceCream.ingredient %} selected="selected" {% endif %} value="{{ingredient.id}}">{{ingredient.name}}</option>
+                {% endfor %}
+            </select>
+            <label for="occasion">Ingredient</label>
+        </div> #}
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" name="name" value="{{iceCream.name}}" required="required">
+            <label for="name">Name</label>
+        </div>
+        <hr class="my-4">
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Save</button>
+    </form>
+{% endblock %}

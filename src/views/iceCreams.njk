@@ -1,0 +1,11 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>Ice Creams</h1>
+    <button type="button" class="btn btn-info" onclick="window.location.href='{{createIceCreamPath}}';">Create</button>
+    {% for iceCream in iceCreams %}
+        <p>{{iceCream.name}}</p>
+    {% endfor %}
+
+{% endblock %}

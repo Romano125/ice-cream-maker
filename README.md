@@ -1,2 +1,3 @@
-# ice-cream-maker
+# Ice Cream Maker App
+
 Educational app used in courses
